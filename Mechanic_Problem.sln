@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mechanic_Problem", "Mechanic_Problem\Mechanic_Problem.csproj", "{C8D8D408-D753-4481-91F7-9E0BF474B9EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper_Classes", "Helper_Classes\Helper_Classes.csproj", "{76AC228C-B586-4F41-82F5-F63BE148F412}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8D8D408-D753-4481-91F7-9E0BF474B9EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D8D408-D753-4481-91F7-9E0BF474B9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D8D408-D753-4481-91F7-9E0BF474B9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D8D408-D753-4481-91F7-9E0BF474B9EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76AC228C-B586-4F41-82F5-F63BE148F412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76AC228C-B586-4F41-82F5-F63BE148F412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76AC228C-B586-4F41-82F5-F63BE148F412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76AC228C-B586-4F41-82F5-F63BE148F412}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84B7B42B-97D5-4A03-8A83-C315DD5712BF}
+	EndGlobalSection
+EndGlobal
