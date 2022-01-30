@@ -50,7 +50,7 @@ namespace Mechanic_Problem
                 }
 
                 
-
+                //Checking if any more customers or not
                 exit = Check_New_Customer();
 
             }
