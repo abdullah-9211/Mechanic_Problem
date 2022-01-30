@@ -102,19 +102,30 @@ namespace Mechanic_Problem
                 Console.Write("\n\n\n");
             }
 
-            Console.WriteLine("Please press Enter to continue....");
-            Console.ReadKey();
+            string response = "";
 
-            Write_To_Files(Q_list, curr);
+            Console.Write("Are you satisfied with your responses? Yes or No: ");
+            response = Console.ReadLine();
+
+            if (response.ToUpper() == "YES")
+            {
+                Write_To_Files(Q_list, curr);
+            }
+            else
+            {
+                Questions_Menu(Q_list, curr);
+            }
+
+            
         }
 
 
         //Function for the service questions menu
-        public static void Questions_Menu(List<Question> Q_List, string name)
+        public static void Questions_Menu(List<Question> Q_List, Car curr)
         {
             Console.Clear();
             Console.Write("\t\t===============================SERVICE QUESTIONS======================\n\n\n");
-            Console.Write("Please answer the following questions " + name + " :-\n\n\n");
+            Console.Write("Please answer the following questions " + curr.Owner + " :-\n\n\n");
 
 
             string response = "";
@@ -150,6 +161,8 @@ namespace Mechanic_Problem
                 }
 
             }
+
+            Print_Responses(Q_List, curr);
 
         }
 
