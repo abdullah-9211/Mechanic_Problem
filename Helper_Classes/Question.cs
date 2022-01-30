@@ -15,6 +15,12 @@ namespace Helper_Classes
             Reasoning = reasoning;
         }
 
+        public void Clear_Response()
+        {
+            this.Reasoning = "";
+            this.Response = false;
+        }
+
         public string Content { get; set; }
         public bool Response { get; set; }
         public string Reasoning { get; set; } //Only to be filled in case Response is false

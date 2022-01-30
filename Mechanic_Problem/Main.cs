@@ -9,22 +9,39 @@ namespace Main
 {
     class Program
     {
-        public static void Main()
+        //Function to initialise the list of questions
+        public static void Init_Qs(List<Question> l1)
         {
-            List<Question> Five_Q = new List<Question>();
             Question q1 = new Question("Dummy Question 1?");
             Question q2 = new Question("Dummy Question 2?");
             Question q3 = new Question("Dummy Question 3?");
             Question q4 = new Question("Dummy Question 4?");
             Question q5 = new Question("Dummy Question 5?");
-            Five_Q.Add(q1);
-            Five_Q.Add(q2);
-            Five_Q.Add(q3);
-            Five_Q.Add(q4);
-            Five_Q.Add(q5);
+            Question q6 = new Question("Dummy Question 6?");
+            Question q7 = new Question("Dummy Question 7?");
 
 
+            l1.Add(q1);
+            l1.Add(q2);
+            l1.Add(q3);
+            l1.Add(q4);
+            l1.Add(q5);
+            l1.Add(q6);
+            l1.Add(q7);
 
+
+        }
+
+        public static void Main()
+        {
+            //List Containing All the questions to be asked
+            List<Question> Questions = new List<Question>();
+
+            //Initialises Questions in list
+            Init_Qs(Questions);
+
+
+            
 
 
             Console.ReadKey();
