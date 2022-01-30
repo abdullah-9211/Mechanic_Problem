@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using Helper_Classes;
 
@@ -9,6 +10,43 @@ namespace Mechanic_Problem
 {
     public class Utility_Functions
     {
+        //Writes all values to files
+        public static void Write_To_Files(List<Question> Q_list, Car curr)
+        {
+            //Writing Responses and Credentials to files
+            StreamWriter name_writer = File.AppendText("CustomerInfo.txt");
+            StreamWriter sw = File.AppendText("Responses.txt");
+
+            name_writer.WriteLine("Name: {0}", curr.Owner);
+            name_writer.WriteLine("Registration Number: {0}", curr.Reg_num);
+            name_writer.WriteLine("Odo Reading: {0}\n", curr.Distance);
+
+            name_writer.Write("------------------------------------------------------------------------------------\n\n");
+
+            name_writer.Close();
+
+            sw.WriteLine("Name: {0}", curr.Owner);
+            sw.WriteLine("Registration Number: {0}", curr.Reg_num);
+            sw.WriteLine("Odo Reading: {0}\n", curr.Distance);
+
+            foreach (var i in Q_list)
+            {
+                sw.WriteLine(i.Content);
+                if (i.Response)
+                    sw.WriteLine("Response: Yes");
+                else
+                {
+                    sw.WriteLine("Response: No");
+                    sw.WriteLine("Reasoning for Response: {0}", i.Reasoning);
+                }
+                sw.WriteLine();
+            }
+            sw.Write("\n------------------------------------------------------------------------------------\n\n");
+
+            sw.Close();
+        }
+
+
         //Goodbye Screen
         public static void Exit_Screen()
         {
@@ -30,7 +68,10 @@ namespace Mechanic_Problem
             choice = Console.ReadLine();
 
             if (choice.ToUpper() == "YES")
+            {
+                Console.Clear();
                 return false;
+            }
 
             return true;
         }
@@ -63,6 +104,8 @@ namespace Mechanic_Problem
 
             Console.WriteLine("Please press Enter to continue....");
             Console.ReadKey();
+
+            Write_To_Files(Q_list, curr);
         }
 
 
