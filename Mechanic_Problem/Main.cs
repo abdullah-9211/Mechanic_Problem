@@ -21,9 +21,9 @@ namespace Mechanic_Problem
             //Initialises Questions in list
             Init_Qs(Fiftyk_Questions, Hundredk_Questions, Two_Hundredk_Questions);
 
-            int option = -1;
+            bool exit = false;
 
-            while (option != 0)
+            while (!exit)
             {
                 string name, reg;
                 int dist;
@@ -35,8 +35,21 @@ namespace Mechanic_Problem
                 //The current car in store
                 Car current_car = new Car(name, reg, dist);
 
-                
-                option = 0;
+                //Calling question list according to the odo meter of current car
+                if (current_car.Distance == 50000)
+                {
+                    Questions_Menu(Fiftyk_Questions, current_car.Owner);
+                }
+                else if (current_car.Distance == 100000)
+                {
+                    Questions_Menu(Hundredk_Questions, current_car.Owner);
+                }
+                else
+                    Questions_Menu(Two_Hundredk_Questions, current_car.Owner);
+
+
+
+                exit = true;
 
             }
 

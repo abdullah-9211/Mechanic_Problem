@@ -9,6 +9,51 @@ namespace Mechanic_Problem
 {
     public class Utility_Functions
     {
+
+        //Function for the service questions menu
+        public static void Questions_Menu(List<Question> Q_List, string name)
+        {
+            Console.Clear();
+            Console.Write("\t\t===============================SERVICE QUESTIONS======================\n\n\n");
+            Console.Write("Please answer the following questions " + name + " :-\n\n\n");
+
+
+            string response = "";
+
+            //Printing all Questions and getting response
+            for (int i = 0; i < Q_List.Count; i++)
+            {
+                Console.Write("\t\t\tQUESTION " + (i + 1) + "\n");
+                Console.WriteLine(Q_List[i].Content);
+                Console.Write("Enter Response (Yes or No only): ");
+                response = Console.ReadLine();
+                Console.Write("\n\n");
+
+                while (response.ToUpper() != "YES" && response.ToUpper() != "NO")
+                {
+                    Console.WriteLine("Invalid Response");
+                    Console.Write("Only Enter Yes or No: ");
+                    response = Console.ReadLine();
+                    Console.Write("\n\n");
+                }
+
+                if (response.ToUpper() == "YES")
+                {
+                    Q_List[i].Response = true;
+                }
+                else
+                {
+                    Q_List[i].Response = false;
+                    Console.Write("Please provide a reasoning for the choice you've made: ");
+                    response = Console.ReadLine();
+                    Q_List[i].Reasoning = response;
+                    Console.Write("\n\n");
+                }
+
+            }
+
+        }
+
         //Function to Print out Menu
         public static void Present_Menu()
         {
