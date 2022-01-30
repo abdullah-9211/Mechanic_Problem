@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Helper_Classes
 {
-    class Question
+    public class Question
     {
         public Question(string content = "", bool response = false, string reasoning = "")
         {
