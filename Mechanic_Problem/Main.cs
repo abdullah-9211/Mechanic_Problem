@@ -39,13 +39,18 @@ namespace Mechanic_Problem
                 if (current_car.Distance == 50000)
                 {
                     Questions_Menu(Fiftyk_Questions, current_car.Owner);
+                    Print_Responses(Fiftyk_Questions, current_car);
                 }
                 else if (current_car.Distance == 100000)
                 {
                     Questions_Menu(Hundredk_Questions, current_car.Owner);
+                    Print_Responses(Hundredk_Questions, current_car);
                 }
                 else
+                {
                     Questions_Menu(Two_Hundredk_Questions, current_car.Owner);
+                    Print_Responses(Two_Hundredk_Questions, current_car);
+                }
 
 
 

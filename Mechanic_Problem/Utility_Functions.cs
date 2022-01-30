@@ -9,6 +9,36 @@ namespace Mechanic_Problem
 {
     public class Utility_Functions
     {
+        //Function to Print responses of user
+        public static void Print_Responses(List<Question> Q_list, Car curr)
+        {
+            Console.Clear();
+            Console.Write("\t\t===============================YOUR RESPONSES======================\n\n\n");
+
+            Console.WriteLine("Name: " + curr.Owner);
+            Console.WriteLine("Registration Number: " + curr.Reg_num);
+            Console.WriteLine("Odo Reading: {0} km", curr.Distance);
+            Console.WriteLine();
+
+            foreach (Question i in Q_list)
+            {
+                Console.WriteLine("Question: {0}", i.Content);
+                if (i.Response)
+                {
+                    Console.WriteLine("Response: Yes");
+                }
+                else
+                {
+                    Console.WriteLine("Response: No");
+                    Console.WriteLine("Reasoning for Response: {0}", i.Reasoning);
+                }
+                Console.Write("\n\n\n");
+            }
+
+            Console.WriteLine("Please press Enter to continue....");
+            Console.ReadKey();
+        }
+
 
         //Function for the service questions menu
         public static void Questions_Menu(List<Question> Q_List, string name)
