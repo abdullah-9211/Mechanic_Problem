@@ -36,6 +36,5 @@ namespace Helper_Classes
             Reg_num = reg;
             Distance = dist;
         }
-
     }
 }
