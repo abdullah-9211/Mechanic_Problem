@@ -54,10 +54,11 @@ namespace Mechanic_Problem
 
 
 
-                exit = true;
+                exit = Check_New_Customer();
 
             }
 
+            Exit_Screen();
 
             Console.ReadKey();
         }

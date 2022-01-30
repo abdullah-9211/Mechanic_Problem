@@ -9,6 +9,32 @@ namespace Mechanic_Problem
 {
     public class Utility_Functions
     {
+        //Goodbye Screen
+        public static void Exit_Screen()
+        {
+            Console.Clear();
+
+            string s = "Thank You :)";
+
+            Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, (Console.WindowHeight - s.Length) / 2);
+            Console.WriteLine(s);
+        }
+
+        //Function to check if there are any more customers or we exit
+        public static bool Check_New_Customer()
+        {
+            var choice = "";
+
+            Console.Clear();
+            Console.Write("Are there any more customers? Yes or No: ");
+            choice = Console.ReadLine();
+
+            if (choice.ToUpper() == "YES")
+                return false;
+
+            return true;
+        }
+
         //Function to Print responses of user
         public static void Print_Responses(List<Question> Q_list, Car curr)
         {
