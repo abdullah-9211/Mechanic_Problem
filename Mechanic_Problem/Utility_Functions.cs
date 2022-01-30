@@ -9,6 +9,37 @@ namespace Mechanic_Problem
 {
     public class Utility_Functions
     {
+        //Function to Print out Menu
+        public static void Present_Menu()
+        {
+            Console.Write("\t\t===============================WELCOME TO THE MECHANIC======================\n\n\n");
+            Console.Write("Please answer the following questions:-\n\n");
+        }
+
+
+        //Asks user for questions and takes input
+        public static void Ask_Questions(out string name, out string reg, out int dist)
+        {
+            Console.Write("Please enter your name: ");
+            name = Console.ReadLine();
+            Console.Write("\n");
+
+            Console.Write("Please enter registration number of your car: ");
+            reg = Console.ReadLine();
+            Console.Write("\n");
+
+            Console.Write("Please enter odo reading of car (50000, 100000 or 200000): ");
+            dist = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n");
+
+            while (dist != 50000 && dist != 100000 && dist != 200000)
+            {
+                Console.WriteLine("Invalid Input!!");
+                Console.Write("Please enter 50000, 100000 or 200000 only: ");
+                dist = Convert.ToInt32(Console.ReadLine());
+                Console.Write("\n");
+            }
+        }
 
         //Function to initialise the lists of questions
         public static void Init_Qs(List<Question> l1, List<Question> l2, List<Question> l3)

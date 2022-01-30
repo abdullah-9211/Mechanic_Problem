@@ -10,25 +10,7 @@ namespace Helper_Classes
     {
         public string Owner { get; set; }
         public string Reg_num { get; set; } 
-        public int Distance
-        {
-            set
-            {
-                if (value == 50 || value == 100 || value == 200)
-                {
-                    Distance = value;
-                }
-                else
-                {
-                    Console.WriteLine("Invalid Value");
-                }
-            }
-
-            get
-            {
-                return Distance;
-            }
-        }
+        public int Distance { get; set; }
 
         public Car(string own = "", string reg = "", int dist = 0)
         {

@@ -21,8 +21,24 @@ namespace Mechanic_Problem
             //Initialises Questions in list
             Init_Qs(Fiftyk_Questions, Hundredk_Questions, Two_Hundredk_Questions);
 
-            Console.WriteLine(Fiftyk_Questions[4].Content);
-            
+            int option = -1;
+
+            while (option != 0)
+            {
+                string name, reg;
+                int dist;
+
+                //Present initial menu and Take input of user car
+                Present_Menu();
+                Ask_Questions(out name, out reg, out dist);
+
+                //The current car in store
+                Car current_car = new Car(name, reg, dist);
+
+                
+                option = 0;
+
+            }
 
 
             Console.ReadKey();
